@@ -12,37 +12,61 @@
 :root{
     --cor01: #FF0000;
     --cor02: #00FF00;
-    --cor03: #0000FF;
+    --cor03: #0000ff;
     --branca: #ffffff;
 }
 
 /*FORMATANDO O A TAG main PELO ID geral*/
 geral{
     margin: 20px;
-
 }
 
 /*FORMATANDO CABEÇALHO*/
 #cabecalho{
-    background-color: aqua;
+
+    color: rgb(255, 0, 0);
+    background-color: rgb(83, 83, 83);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px, 20px;
+    padding: 10px 10px;
     height: 70px;
 }
 
 /*CONFIGURANDO MENU NA HORIZONTAL*/
 #menu ul{
+    color: rgb(255, 0, 0);
     display: flex;
     gap: 30px;
     list-style: none;
 }
 
-#menu ul{
-    width: 25px;
+#menu ul img{
+    margin: 10px;
+    width:  25px;
     height: 25px;
     
+}
+
+#cards img{
+
+    background-color: gray;
+    width:  700px;
+    height: 500px;
+    
+}
+
+
+#rodape{
+    height: 50px;
+    align-items: center;
+    background-color: gray;
+
+}
+
+a{
+    
+    color: rgb(255, 0, 0);
 }
 
 
