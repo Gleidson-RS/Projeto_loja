@@ -18,8 +18,13 @@
 }
 
 /*FORMATANDO O A TAG main PELO ID geral*/
-geral{
-    margin: 20px;
+#geral{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 /*FORMATANDO CABEÇALHO*/
@@ -32,6 +37,7 @@ geral{
     align-items: center;
     padding: 10px 10px;
     height: 70px;
+    width: 100%;
 }
 
 /*CONFIGURANDO MENU NA HORIZONTAL*/
@@ -52,16 +58,17 @@ geral{
 /*FORMATANDO A SECTION pesquisa*/
 
 #pesquisa{
-    height: 200px;
+    height: 100px;
     background-color: var(--cor03);
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 #pesquisa input{
     width: 650px;
-    height: 80px;
+    height: 50px;
     background-color: var(--branca);
     border-radius: 8px;
     padding: 10px;
@@ -82,6 +89,9 @@ geral{
     grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     gap: 20px;
     margin: 20px 0px;
+    width: 1000px;
+    min-height: 800px;
+
 }
 
 .card{
@@ -110,19 +120,67 @@ geral{
     color:var(--cor02)
 }
 
+.card button{
+    width: 200px;
+    height: 35px;
+    margin: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cor03);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--cor02);
+    font-weight: bold;
+    cursor: pointer;
 
+}
 
+.card:hover{
+    transform: translateY(-5px);
+}
 
+/*FORMATANDO O RODAPÉ*/
 
+#rodape{
+    width: 100%;
+    height: 70px;
+    margin: 20px 0px;
+    padding: 10px;
+    background-color: rgb(228, 113, 31);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+/*FORMATANDO Os LINKS*/
 
+#menu a:link{
 
-
-
-
-
-
-
-a{
+    font-size: 1.4em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-decoration: none;
     color: #FF0000;
+}
+
+a:visited, a:active{
+    color: #ff3636;
+}
+
+a:hover{
+
+    font-size: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: #a50000;
+}
+
+footer h4{
+    color:  rgb(228, 113, 31);
+}
+
+footer h4:hover{
+color: black;
 }
