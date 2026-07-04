@@ -4,23 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="../css/style_estrutura_paginas.css".css">
+    <link rel="stylesheet" href="../css/style_formulario.css".css">
     <link rel="shortcut icon" href="../imagens/icones/favicon.ico" type="image/x-icon">
 </head>
 <body>
+        <main id="geral">
+          <header id="cabecalho">
+            <div id="logo">
+                Cadrastro
+        
 
-    <main id="geral"></main>
-    <h3>Cadastro</h3>
 
-    <nav id="menu">
-        <ul>
-            <li> <a href="../index.html"> Inicio </a> </li>
-            <li> <a href="/paginas/cadastro.html"> Cadrastro </a> </li>
-            <li> <a href="/paginas/sobre.html"> Sobre </a> </li>
-            <li> <a href="/paginas/login.html"> Login </a> </li>
-            <li> <a href="/paginas/cadastro.html"><img src="/imagens/icones/carinho.png" alt="Carrinho"></a> </li>
-        </ul>
+            <nav id="menu">
+                <ul>
+                    <li> <a href="../index.html"> Inicio </a> </li> 
+                    <li> <a href="paginas/cadastro.html"> Cadrastro </a> </li>
+                    <li> <a href="paginas/sobre.html"> Sobre </a> </li>
+                    <li> <a href="paginas/login.html"> Login </a> </li>
+                    <li> <a href="paginas/cadastro.html"><img src="/imagens/icones/carinho.png" alt="Carrinho"></a> </li>
+                </ul>
+            </nav>
+      </header>
+
+
+      <section id="campo">
+
+    <div id="campos">
+        <label for="nome">Nome*</label>
+        <input type="text" name="nome" id="nome" class="input01" placeholder="Digite seu nome" maxlength="20" required>
+
+
+
+        <label for="sobrenome">Sobrenome*</label>
+        <input type="text" name="sobrenome" id="sobrenome" class="input01"placeholder="Digite seu Sobrenome" maxlength="20" required>
 
     
+
+        <label for="cpf">CPF*</label>
+        <input type="number" name="cpf" id="cpf" class="input02"placeholder="Digite seu CPF" maxlength="14" required>
+
+
+  
+        <label for="telefone">Telefone*</label>
+        <input type="number" name="telefone" id="telefone" class="input02"placeholder="Digite seu Telefone" maxlength="11" required>
+
+
+   
+        <label for="email">Email*</label>
+        <input type="email" name="email" id="email" class="input01"placeholder="Digite seu Email" maxlength="25" required>
+
+
+ 
+        <label for="data de nascimento">Data De Nascimento*</label>
+        <input type="date" name="data de nascimento" id="data de nascimento" class="input03" required>
+
+
+
+        <label for="cep">CEP*</label>
+        <input type="number" name="cep" id="cep" class="input03"placeholder="Digite seu CEP" maxlength="20" required>
+
+
+
+        <label for="logadouro">Logadouro*</label>
+        <input type="text" name="logadouro" id="logadouro" class="input01"placeholder="Digite seu Logadouro" maxlength="20" required>
+
+
+
+        <label for="numero">Numero*</label>
+        <input type="number" name="nome" id="nome" class="input03"placeholder="Digite seu Numero" maxlength="20" required>
+
+
+
+        <label for="complemento">Complemento*</label>
+        <input type="text" name="complemento" id="complemento" class="input01"placeholder="Digite um Complemento" maxlength="20" required>
+
+
+
+        <label for="bairro">Bairro*</label>
+        <input type="text" name="bairro" id="bairro" class="input01"placeholder="Digite seu Bairro" maxlength="20" required>
+
+
+
+        <label for="cidade">Cidade*</label>
+        <input type="text" name="cidade" id="cidade" class="input01"placeholder="Digite sua Cidade" maxlength="20" required>
+
+
+      
+        <label for="estado">Estado*</label>
+        <select name="estado" id="estado" class="input03"">Estado</select>
+
+
+
+        <label for="senha">Senha*</label>
+        <input type="text" name="senha" id="senha" class="input03"placeholder="Digite sua Senha" maxlength="20" required>
+
+        <div id="caixa-confir">
+        <input type="checkbox" name="caixa-confir" id="caixa-confir" required>
+        <p>Deseja receber nossas ofertars no Email e no Whatsapp?</p>
+        </div>
+
+        <div id="btn">
+        <button id="sibmit">Cadastrar</button>
+        <button id="limpar">Limpar</button>
+         </div>
+    </div>
+        
+      </section>
+
+
+
+
+
+      <footer id="rodape">
+      <h2>&copy Lava Jato E Estetica Automotiva Kits S.A. Todos os direitos reservados</h2>
+      <p>Formas de pagamento: Pix, Cartões de Débito e Crédito</p>
+      <h4>(Não é um laranja hehehe >;D)</h4>
+    </footer>
+
+        </main>
 </body>
 </html>
