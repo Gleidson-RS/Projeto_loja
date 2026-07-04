@@ -1,0 +1,170 @@
+@import url(style_estrutura_paginas.css);
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+#geral{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#cabecalho{
+
+    color: rgb(255, 0, 0);
+    background-color: var(--cor02);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    height: 70px;
+    width: 100%;
+}
+
+#menu ul{
+    color: rgb(255, 0, 0);
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+#menu ul img{
+    width:  25px;
+    height: 25px;
+    
+}
+
+#campos{
+    margin-top: 50px;
+    width: 650px;
+    padding: 15px;
+    background-color: rgb(128, 126, 126);
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: normal;
+    border: 1px solid var(--cor02);
+    color: #000000;
+}
+
+#campos input{
+    margin: 8px 0px;
+    height: 30px;
+}
+
+.input01{
+    width: 100%;
+}
+
+.input02{
+    width: 60%;
+}
+
+.input03{
+    width: 30%;
+}
+
+#caixa-confir{
+
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+#caixa-confir p{
+    margin: 0;
+    white-space: nowrap;
+}
+
+#campos button{
+
+    height: 40px;
+    width: 250px;
+    margin: 50px 0px 15px 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#menu a:link{
+
+    align-items: end;
+    justify-content: end;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: #FF0000;
+}
+
+a:visited, a:active{
+    color: #ff3636;
+}
+
+a:hover{
+
+    font-size: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: #a10808;
+}
+
+footer h4{
+    color:  rgb(228, 113, 31);
+}
+
+footer h4:hover{
+color: black;
+}
