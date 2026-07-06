@@ -3,40 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lava Jato E Estetica Automotiva Kits S.A.</title>
-    <link rel="stylesheet" href="css/style_estrutura_paginas.css".css">
-    <link rel="shortcut icon" href="/imagens/icones/favicon.ico" type="image/x-icon">
-
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../css/syle_carrinho.css".css">
+    <link rel="shortcut icon" href="../imagens/icones/favicon.ico" type="image/x-icon">
 </head>
 <body>
-        <main id="geral">
-          <header id="cabecalho">
-            <div id="logo">
-                Sua Loja
+
+<main id="geral">
+
+    <header id="cabecalho">
+
+        <div id="logo">
+            Sua Loja
+        </div>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <section id="titulo">
+        <h1>Meu Carrinho</h1>
+    </section>
+
+
+    <section id="carrinho">
+
+        <div id="lista-produtos">
+
+            <div class="produto">
+
+                <div class="imagem">
+                    <img src="../imagens/produtos/produto1.jpg" alt="">
+                </div>
+
+                <div class="informacoes">
+
+                    <h2>Kit Limpeza Geral</h2>
+
+                    <p>Preço: <strong>R$ 60,00</strong></p>
+
+                    <div class="quantidade">
+
+                        <button>-</button>
+
+                        <input type="number" value="1" min="1">
+
+                        <button>+</button>
+
+                    </div>
+
+                </div>
+
+                <button class="remover">
+                    Remover
+                </button>
+
             </div>
 
 
-            <nav id="menu">
-                <ul>
-                    <li> <a href="index.html"> Inicio </a> </li> 
-                    <li> <a href="paginas/cadastro.html"> Cadrastro </a> </li>
-                    <li> <a href="paginas/sobre.html"> Sobre </a> </li>
-                    <li> <a href="paginas/login.html"> Login </a> </li>
-                    <li> <a href="paginas/cadastro.html"><img src="/imagens/icones/carinho.png" alt="Carrinho"></a> </li>
-                </ul>
-            </nav>
-      </header>
+
+            <div class="produto">
+
+                <div class="imagem">
+                    <img src="../imagens/produtos/produto2.jpg" alt="">
+                </div>
+
+                <div class="informacoes">
+
+                    <h2>Kit Limpeza Vidros</h2>
+
+                    <p>Preço: <strong>R$ 60,00</strong></p>
+
+                    <div class="quantidade">
+
+                        <button>-</button>
+
+                        <input type="number" value="2" min="1">
+
+                        <button>+</button>
+
+                    </div>
+
+                </div>
+
+                <button class="remover">
+                    Remover
+                </button>
+
+            </div>
+
+        </div>
 
 
 
-        <div id="btn">
-            <button id="sibmit" class="btn-1">Login</button>
-            <button id="limpar" class="btn-2">Limpar</button>
-          </div>
+        <aside id="resumo">
 
+            <h2>Resumo da Compra</h2>
 
+            <hr>
 
-        </main>
-    </div>  
+            <p>Produtos <span>R$ 180,00</span></p>
+
+            <p>Frete <span>Grátis</span></p>
+
+            <hr>
+
+            <h3>Total <span>R$ 180,00</span></h3>
+
+            <button id="finalizar">
+                Finalizar Compra
+            </button>
+
+        </aside>
+
+    </section>
+
+</main>
+
 </body>
 </html>
