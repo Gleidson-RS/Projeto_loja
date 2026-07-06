@@ -1,0 +1,110 @@
+@import url(style_estrutura_paginas.css);
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+#geral{
+    margin-right: 5px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#cabecalho{
+
+    color: rgb(255, 0, 0);
+    background-color: var(--cor02);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    height: 70px;
+    width: 100%;
+}
+
+
+#menu ul{
+ 
+    color: rgb(255, 0, 0);
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+#menu ul img{
+    margin-left: auto;
+    width:  25px;
+    height: 25px;   
+}
+
+h3, h2{
+
+    
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h2{
+    width: 100%;
+    margin-top:20px;
+    text-align: center;
+
+}
+
+
+#textos{
+
+
+    background-color: var(--cor03);
+    margin-top: 30px;
+    width:  80%;
+    height: 100%;   
+}
+
+
+
+#texto{
+    padding: 20px;
+    align-items: center;    
+    justify-content: center;
+  
+}
+
+
+
+
+
+
+
+
+
+a:visited, a:active{
+    color: #ff3636;
+}
+
+a:hover{
+
+    font-size: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: #a10808;
+}
+
+footer h4{
+
+    color:  rgba(228, 113, 31, 0);
+}
+
+footer h4:hover{
+color: black;
+}
