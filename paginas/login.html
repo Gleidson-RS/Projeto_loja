@@ -4,22 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/style_sobre.css".css">
+    <link rel="stylesheet" href="../css/style_login.css".css">
     <link rel="shortcut icon" href="../imagens/icones/favicon.ico" type="image/x-icon">
+
 </head>
 <body>
+        <main id="geral">
+          <header id="cabecalho">
+            <div id="logo">
+                Login
+            </div>
 
-    <main id="geral"></main>
-    <h3>Cadastro</h3>
 
-    <nav id="menu">
-        <ul>
-            <li> <a href="../index.html"> Inicio </a> </li> 
-            <li> <a href="/paginas/cadastro.html"> Cadrastro </a> </li>
-            <li> <a href="/paginas/sobre.html"> Sobre </a> </li>
-            <li> <a href="/paginas/login.html"> Login </a> </li>
-            <li> <a href="/paginas/carrinho.html"><img src="/imagens/icones/carinho.png" alt="Carrinho"></a> </li>
-        </ul>
-    
+            <nav id="menu">
+                <ul>
+                    <li> <a href="../index.html"> Inicio </a> </li> 
+                    <li> <a href="/paginas/cadastro.html"> Cadrastro </a> </li>
+                    <li> <a href="/paginas/sobre.html"> Sobre </a> </li>
+                    <li> <a href="/paginas/login.html"> Login </a> </li>
+                    <li> <a href="/paginas/carrinho.html"><img src="/imagens/icones/carinho.png" alt="Carrinho"></a> </li>
+                </ul>
+            </nav>
+      </header>
+
+        <section id="campo">
+
+                <div id="campos">
+
+
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" class="input01"placeholder="Digite seu Email" maxlength="25" required>
+                    
+                <label for="cpf">CPF*</label>
+                <input type="number" name="cpf" id="cpf" class="input02"placeholder="Digite seu CPF" maxlength="14" required>
+        
+        
+                <label for="senha">Senha*</label>
+                <input type="text" name="senha" id="senha" class="input03"placeholder="Digite sua Senha" maxlength="20" required>
+                </div>
+
+                <div id="btn">
+                    <button id="sibmit" class="btn-1">Login</button>
+                    <button id="limpar" class="btn-2">Limpar</button>
+                </div>
+                
+
 </body>
 </html>
