@@ -8,6 +8,7 @@
 }
 
 #geral{
+    margin-right: 5px;
     margin: 0px;
     display: flex;
     flex-direction: column;
@@ -29,16 +30,20 @@
 }
 
 #menu ul{
+    display: flex;
+    margin-left: auto;
     color: rgb(255, 0, 0);
     display: flex;
     gap: 20px;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 #menu ul img{
+
     width:  25px;
     height: 25px;
-    
 }
 
 #campos{

@@ -8,6 +8,7 @@
 }
 
 #geral{
+    margin-right: 5px;
     margin: 0px;
     display: flex;
     flex-direction: column;
@@ -28,7 +29,9 @@
     width: 100%;
 }
 
+
 #menu ul{
+ 
     color: rgb(255, 0, 0);
     display: flex;
     gap: 20px;
@@ -36,14 +39,44 @@
 }
 
 #menu ul img{
+    margin-left: auto;
     width:  25px;
     height: 25px;   
 }
 
+h3, h2{
+
+    
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h2{
+    width: 100%;
+    margin-top:20px;
+    text-align: center;
+
+}
+
+
+#textos{
+
+
+    background-color: var(--cor03);
+    margin-top: 30px;
+    width:  80%;
+    height: 100%;   
+}
+
+
 
 #texto{
-    width:  50%;
-    height: 50%;   
+    padding: 20px;
+    align-items: center;    
+    justify-content: center;
+  
 }
 
 
@@ -68,7 +101,8 @@ a:hover{
 }
 
 footer h4{
-    color:  rgb(228, 113, 31);
+
+    color:  rgba(228, 113, 31, 0);
 }
 
 footer h4:hover{
