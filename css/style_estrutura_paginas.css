@@ -12,7 +12,7 @@
 :root{
     --cor01: #FF0000;
     --cor02: #414141;
-    --cor03: #929292;
+    --cor03: #5a5a5a;
     --cor04: #0000ff;
     --branca: #ffffff;
 }
@@ -43,11 +43,17 @@
 }
 
 /*CONFIGURANDO MENU NA HORIZONTAL*/
-#menu ul{
+#menu ul, #secoes-produtos{
     color: rgb(255, 0, 0);
     display: flex;
     gap: 20px;
     list-style: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+
+
 }
 
 #menu ul img{
@@ -60,7 +66,7 @@
 /*FORMATANDO A SECTION pesquisa*/
 
 #pesquisa{
-    height: 100px;
+    height: 70px;
     background-color: var(--cor03);
     display: flex;
     justify-content: center;
@@ -69,8 +75,8 @@
 }
 
 #pesquisa input{
-    width: 650px;
-    height: 50px;
+    width: 630px;
+    height: 35px;
     background-color: var(--branca);
     border-radius: 8px;
     padding: 10px;
@@ -82,6 +88,21 @@
     font-size: 1.3em;
     font-style: italic;
     color: var(--cor02);
+}
+
+/*FORMATANDO SEÇÕES*/
+#secoes{
+    min-width: 100px;
+    width: 100%;
+    margin: 0px 0px;
+    padding: 5px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: var(--cor02);
+    align-items: center;
+    justify-content: center;
 }
 
 /*FORMATANDO OS CARDS*/
@@ -157,7 +178,7 @@
 
 /*FORMATANDO Os LINKS*/
 
-#menu a:link{
+#menu .links:link, #secoes .lnk-secoes:link{
 
     font-size: 1.4em;
     text-transform: uppercase;
@@ -166,11 +187,11 @@
     color: #FF0000;
 }
 
-a:visited, a:active{
+#menu .links:visited,  #menu .links:active, #secoes .lnk-secoes:visited, #secoes .lnk-secoes:active{
     color: #ff3636;
 }
 
-a:hover{
+#menu .links:hover, #secoes .lnk-secoes:hover{
 
     font-size: 1.6em;
     text-transform: uppercase;
