@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-/*DEFINI AS CONFIGURAÇÕES DE ELEMENTOS DE TODAS AS PAGINAS*/
 
+/*DEFINI AS CONFIGURAÇÕES DE ELEMENTOS DE TODAS AS PAGINAS*/
 *{
     margin: 0px;
     padding: 0px;
@@ -19,8 +19,8 @@
 
 /*FORMATANDO O A TAG main PELO ID geral*/
 #geral{
-    margin-right: 5px;
     margin: 0px;
+    margin-right: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,58 +30,57 @@
 
 /*FORMATANDO CABEÇALHO*/
 #cabecalho{
-
-    color: rgb(255, 0, 0);
-    background-color: var(--cor02);
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10px;
-    height: 70px;
+
     width: 100%;
+    height: 70px;
+    padding: 10px 10px;
+
+    background-color: var(--cor02);
+    color: rgb(255, 0, 0);
 }
 
 /*CONFIGURANDO MENU NA HORIZONTAL*/
-#menu ul, #secoes-produtos{
-    color: rgb(255, 0, 0);
+#menu ul,
+#secoes-produtos{
     display: flex;
-    gap: 20px;
-    list-style: none;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    gap: 20px;
+
     width: 100%;
-    
 
-
+    list-style: none;
+    color: rgb(255, 0, 0);
 }
 
 #menu ul img{
-    width:  25px;
+    width: 25px;
     height: 25px;
-    
 }
 
-
 /*FORMATANDO A SECTION pesquisa*/
-
 #pesquisa{
-    height: 70px;
-    background-color: var(--cor03);
     display: flex;
     justify-content: center;
     align-items: center;
+
     width: 100%;
+    height: 70px;
+
+    background-color: var(--cor03);
 }
 
 #pesquisa input{
     width: 630px;
     height: 35px;
+    padding: 10px;
+
     background-color: var(--branca);
     border-radius: 8px;
-    padding: 10px;
     font-size: 1.4em;
-
 }
 
 #pesquisa input::placeholder{
@@ -92,39 +91,43 @@
 
 /*FORMATANDO SEÇÕES*/
 #secoes{
-    min-width: 100px;
-    width: 100%;
-    margin: 0px 0px;
-    padding: 5px;
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    background-color: var(--cor02);
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    min-width: 100px;
+    width: 100%;
+    height: 100%;
+
+    margin: 0px 0px;
+    padding: 5px;
+
+    background-color: var(--cor02);
 }
 
 /*FORMATANDO OS CARDS*/
-
 #cards{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     gap: 20px;
-    margin: 20px 0px;
+
     width: 1000px;
     min-height: 800px;
-
+    margin: 20px 0px;
 }
 
 .card{
-    width: 250px;
-    min-height: 350px;
-    padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    width: 250px;
+    min-height: 350px;
+    padding: 5px;
+
     border: 1px solid var(--cor02);
 }
 
@@ -140,22 +143,24 @@
 }
 
 .card h2{
-    color:var(--cor02)
+    color: var(--cor02);
 }
 
 .card button{
     width: 200px;
     height: 35px;
     margin: 20px;
+
     border: none;
     border-radius: 5px;
+
     background-color: var(--cor03);
+    color: var(--cor01);
+
     text-transform: uppercase;
     letter-spacing: 5px;
-    color: var(--cor02);
     font-weight: bold;
     cursor: pointer;
-
 }
 
 .card:hover{
@@ -163,23 +168,24 @@
 }
 
 /*FORMATANDO O RODAPÉ*/
-
 #rodape{
-    width: 100%;
-    height: 70px;
-    margin: 20px 0px;
-    padding: 10px;
-    background-color: rgb(228, 113, 31);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    width: 100%;
+    height: 70px;
+
+    margin: 20px 0px;
+    padding: 10px;
+
+    background-color: rgb(228, 113, 31);
 }
 
 /*FORMATANDO Os LINKS*/
-
-#menu .links:link, #secoes .lnk-secoes:link{
-
+#menu .links:link,
+#secoes .lnk-secoes:link{
     font-size: 1.4em;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -187,12 +193,15 @@
     color: #FF0000;
 }
 
-#menu .links:visited,  #menu .links:active, #secoes .lnk-secoes:visited, #secoes .lnk-secoes:active{
+#menu .links:visited,
+#menu .links:active,
+#secoes .lnk-secoes:visited,
+#secoes .lnk-secoes:active{
     color: #ff3636;
 }
 
-#menu .links:hover, #secoes .lnk-secoes:hover{
-
+#menu .links:hover,
+#secoes .lnk-secoes:hover{
     font-size: 1.6em;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -201,9 +210,9 @@
 }
 
 footer h4{
-    color:  rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0);
 }
 
 footer h4:hover{
-color: black;
+    color: black;
 }
