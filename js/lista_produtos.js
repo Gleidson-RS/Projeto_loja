@@ -46,3 +46,5 @@ const produtos = [
     { id_produto: 39, descricao_produto: "Boina de Lã", valor_unitario: 45.90, unidade: "UN", caminho_imagem: "img/boina-la.jpg", id_secao: 7, secao: "Polimento" },
     { id_produto: 40, descricao_produto: "Luva de Microfibra", valor_unitario: 24.90, unidade: "UN", caminho_imagem: "img/luva-microfibra.jpg", id_secao: 7, secao: "Polimento" }
   ];
+
+export{produtos}
