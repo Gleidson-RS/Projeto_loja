@@ -28,23 +28,23 @@ const produtos = [
     { id_produto: 24, descricao_produto: "Aplicador de Cera", valor_unitario: 9.90, unidade: "UN", caminho_imagem: "../aplicador.jpg", id_secao: 4, secao: "Acessórios" },
     { id_produto: 25, descricao_produto: "Pulverizador 500ml", valor_unitario: 16.90, unidade: "UN", caminho_imagem: "../pulverizador.jpg", id_secao: 4, secao: "Acessórios" },
   
-    { id_produto: 26, descricao_produto: "Pretinho para Pneus", valor_unitario: 19.90, unidade: "UN", caminho_imagem: "../pretinho.jpg", id_secao: 5, secao: "Acabamento" },
-    { id_produto: 27, descricao_produto: "Revitalizador de Plásticos", valor_unitario: 32.90, unidade: "UN", caminho_imagem: "../plasticos.jpg", id_secao: 5, secao: "Acabamento" },
-    { id_produto: 28, descricao_produto: "Silicone Líquido", valor_unitario: 27.90, unidade: "UN", caminho_imagem: "../silicone.jpg", id_secao: 5, secao: "Acabamento" },
-    { id_produto: 29, descricao_produto: "Renovador de Couro", valor_unitario: 44.90, unidade: "UN", caminho_imagem: "../couro.jpg", id_secao: 5, secao: "Acabamento" },
-    { id_produto: 30, descricao_produto: "Odorizador Automotivo", valor_unitario: 14.90, unidade: "UN", caminho_imagem: "../odorizador.jpg", id_secao: 5, secao: "Acabamento" },
+    { id_produto: 26, descricao_produto: "Pretinho para Pneus", valor_unitario: 19.90, unidade: "UN", caminho_imagem: "../pretinho.jpg", id_secao: 4, secao: "Acabamento" },
+    { id_produto: 27, descricao_produto: "Revitalizador de Plásticos", valor_unitario: 32.90, unidade: "UN", caminho_imagem: "../plasticos.jpg", id_secao: 4, secao: "Acabamento" },
+    { id_produto: 28, descricao_produto: "Silicone Líquido", valor_unitario: 27.90, unidade: "UN", caminho_imagem: "../silicone.jpg", id_secao: 4, secao: "Acabamento" },
+    { id_produto: 29, descricao_produto: "Renovador de Couro", valor_unitario: 44.90, unidade: "UN", caminho_imagem: "../couro.jpg", id_secao: 4, secao: "Acabamento" },
+    { id_produto: 30, descricao_produto: "Odorizador Automotivo", valor_unitario: 14.90, unidade: "UN", caminho_imagem: "../odorizador.jpg", id_secao: 4, secao: "Acabamento" },
   
-    { id_produto: 31, descricao_produto: "Descontaminante Ferroso", valor_unitario: 64.90, unidade: "UN", caminho_imagem: "../ferroso.jpg", id_secao: 6, secao: "Detalhamento" },
-    { id_produto: 32, descricao_produto: "Clay Bar", valor_unitario: 49.90, unidade: "UN", caminho_imagem: "../claybar.jpg", id_secao: 6, secao: "Detalhamento" },
-    { id_produto: 33, descricao_produto: "Lubrificante Clay", valor_unitario: 34.90, unidade: "UN", caminho_imagem: "../lubrificante-clay.jpg", id_secao: 6, secao: "Detalhamento" },
-    { id_produto: 34, descricao_produto: "Composto Polidor Corte", valor_unitario: 79.90, unidade: "UN", caminho_imagem: "../polidor-corte.jpg", id_secao: 6, secao: "Detalhamento" },
-    { id_produto: 35, descricao_produto: "Composto Polidor Refino", valor_unitario: 79.90, unidade: "UN", caminho_imagem: "../polidor-refino.jpg", id_secao: 6, secao: "Detalhamento" },
-    { id_produto: 36, descricao_produto: "Composto Polidor Lustro", valor_unitario: 79.90, unidade: "UN", caminho_imagem: "../polidor-lustro.jpg", id_secao: 6, secao: "Detalhamento" },
+    { id_produto: 31, descricao_produto: "Descontaminante Ferroso", valor_unitario: 64.90, unidade: "UN", caminho_imagem: "../ferroso.jpg", id_secao: 4, secao: "Detalhamento" },
+    { id_produto: 32, descricao_produto: "Clay Bar", valor_unitario: 49.90, unidade: "UN", caminho_imagem: "../claybar.jpg", id_secao: 4, secao: "Detalhamento" },
+    { id_produto: 33, descricao_produto: "Lubrificante Clay", valor_unitario: 34.90, unidade: "UN", caminho_imagem: "../lubrificante-clay.jpg", id_secao: 4, secao: "Detalhamento" },
+    { id_produto: 34, descricao_produto: "Composto Polidor Corte", valor_unitario: 79.90, unidade: "UN", caminho_imagem: "../polidor-corte.jpg", id_secao: 4, secao: "Detalhamento" },
+    { id_produto: 35, descricao_produto: "Composto Polidor Refino", valor_unitario: 79.90, unidade: "UN", caminho_imagem: "../polidor-refino.jpg", id_secao: 4, secao: "Detalhamento" },
+    { id_produto: 36, descricao_produto: "Composto Polidor Lustro", valor_unitario: 79.90, unidade: "UN", caminho_imagem: "../polidor-lustro.jpg", id_secao: 4, secao: "Detalhamento" },
   
-    { id_produto: 37, descricao_produto: "Boina de Espuma Corte", valor_unitario: 39.90, unidade: "UN", caminho_imagem: "../boina-corte.jpg", id_secao: 7, secao: "Polimento" },
-    { id_produto: 38, descricao_produto: "Boina de Espuma Refino", valor_unitario: 39.90, unidade: "UN", caminho_imagem: "../boina-refino.jpg", id_secao: 7, secao: "Polimento" },
-    { id_produto: 39, descricao_produto: "Boina de Lã", valor_unitario: 45.90, unidade: "UN", caminho_imagem: "../boina-la.jpg", id_secao: 7, secao: "Polimento" },
-    { id_produto: 40, descricao_produto: "Luva de Microfibra", valor_unitario: 24.90, unidade: "UN", caminho_imagem: "../luva-microfibra.jpg", id_secao: 7, secao: "Polimento" }
+    { id_produto: 37, descricao_produto: "Boina de Espuma Corte", valor_unitario: 39.90, unidade: "UN", caminho_imagem: "../boina-corte.jpg", id_secao: 4, secao: "Polimento" },
+    { id_produto: 38, descricao_produto: "Boina de Espuma Refino", valor_unitario: 39.90, unidade: "UN", caminho_imagem: "../boina-refino.jpg", id_secao: 4, secao: "Polimento" },
+    { id_produto: 39, descricao_produto: "Boina de Lã", valor_unitario: 45.90, unidade: "UN", caminho_imagem: "../boina-la.jpg", id_secao: 4, secao: "Polimento" },
+    { id_produto: 40, descricao_produto: "Luva de Microfibra", valor_unitario: 24.90, unidade: "UN", caminho_imagem: "../luva-microfibra.jpg", id_secao: 4, secao: "Polimento" }
   ];
 
 export{produtos}
