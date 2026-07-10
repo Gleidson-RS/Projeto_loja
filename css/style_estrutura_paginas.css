@@ -43,8 +43,7 @@
 }
 
 /*CONFIGURANDO MENU NA HORIZONTAL*/
-#menu ul,
-#secoes-produtos{
+#menu ul, #secoes-produtos{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,7 +90,7 @@
 
 /*FORMATANDO SEÇÕES*/
 #secoes{
-    display: flex;
+    display:flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -215,4 +214,41 @@ footer h4{
 
 footer h4:hover{
     color: black;
+}
+
+
+
+
+
+
+
+
+#secoes-produtos{
+        display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    min-width: 100px;
+    width: 100%;
+    height: 100%;
+
+    margin: 0px 0px;
+    padding: 5px;
+    list-style: none;
+    background-color: var(--cor02);
+}
+
+
+.lnk-secoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    width: 100%;
+
+    list-style: none;
+    color: rgb(255, 0, 0);
 }

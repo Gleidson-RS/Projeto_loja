@@ -1,57 +1,32 @@
 //IMPORTANDO OS PRODUTOS DE /lista_produtos.js//
 import { produtos } from "./lista_produtos.js";
 //PEGANDO OS ELEMENTOS DO DOM//
-const sectionCards = document.querySelector('#Cards')
+const sectionCards = document.querySelector('#cards')
 
 //CARREGANDO OS Card
 const lista_produtos = () => {
-
-    sectionCard.innerHTML = ''
-
-    produtos.forEach((elem, i) => {
-            
-    const divCard = document.createElement('div')
-    divCard.setAttribute('class', 'card')
-
-    const imgCard = document.createElement('img')
-    imgCard.setAttribute('src', elem.caminho_imagem)
-    imgCard.setAttribute('alt', elem.descricao_produto)
-
-    const pCard = document.createElement('p')
-    pCard.innerHTML = elem.descricao_produto
-
-    const h2Card = document.createElement('h2')
-    h2Card.innerHTML = `R$ ${parseFloat(elem.valor_unitario).toFixed(2).replace('.',',')}`
-
-    const btnCard = document.createElement('button')
-    btnCard.setAttribute('class', 'btn-add')
-    btnCard.innerHTML = 'adicionar'
-
-     divCard.appendChild(imgCard)
-     divCard.appendChild(pCard) 
-     divCard.appendChild(h2Card)
-     divCard.appendChild(btnCard)
-
-     sectionCard.appendChild(divCard)
-
-    });
-
+    
 }
 
-
+//CHAMANDO A FUNÇÃO lista_produtos
 lista_produtos()
 
 // MONTANDO OS MENUS SEÇÕES
 const menuSecoes = () => {
+    //CRIANDO A COLEÇÃO MAP
     const mapSecoes = new Map()
 
+    //PERCORRENDO O ARRAY PRODUTO
     produtos.forEach((elem) => {
+        //SELECIONANDO AS SEÇOES
         mapSecoes.set(elem.id_secao, elem)
         
     })
 
+    //CONVERTENDO MAP EM ARRAY
     const secoesFriltrada = Array.from(mapSecoes.values())
 
+    //RETORNANDO O ARRAY  SELECIONADO
     return secoesFriltrada
 }
 
@@ -60,24 +35,23 @@ const menuSecoes = () => {
 //FUNÇÃO PARA INSERIR OS MENUS NA LISTA
 const carregarSecoes = () =>{
     //PEGANDO ELEMENTOS ul menu-secoes DO DOM
-    const ulMenuSecoes = document.querySelector('#secoes-produtos')
+    const ulMenuSecoes = document.querySelector('#secoes-produtos') 
 
-    //LIMPANDO O ELEMENTO DO DOM
     ulMenuSecoes.innerHTML = ''
 
     //CHAMANDO A FUNÇÃO menuSecoes E PERCORENDO O ARRAY DE SEÇOES JA SELECIONADAS
-    menuSecoes().forEach((ekem, i) => {
+    menuSecoes().forEach((elem, i) => {
         //CRIANDO O ELEMENTEO li
-        const liMenu = document.querySelector('li')
+        const liMenu = document.createElement('li')
 
         //CRIANDO O ELEMENTO a ATRIBUINDO O NOME DA SEÇÃO
-        const aMenu = document.querySelector('a')
+        const aMenu = document.createElement('a')
         aMenu.setAttribute('href', '#')
         aMenu.setAttribute('class' , 'lnk-secoes')
         aMenu.innerHTML = elem.secao
 
         aMenu.addEventListener('click', ()=>{
-            filtroProduto(elem.id_secao)
+            montarCards(filtroProduto(elem.id_secao))
          })
 
         //ADICIONANDO O ELEMENTO FILHO a NO li
@@ -94,4 +68,50 @@ carregarSecoes()
 const filtroProduto = (idSecao)=>{
     //FILTRANDO OS PRODUTOS APARTIR DO REPETIÇÃO filter
     return produtos.filter(elem => elem.id_secao === idSecao)
+}
+
+//FUNÇÃO MONTAR CARDS
+const montarCards = (objProdutos)=>{
+
+
+    //LIMPANDO A SECTION cards
+    sectionCards.innerHTML = ''
+
+    //PERCORRENDO O ARRAY DE objProdutos
+    objProdutos.forEach((elem, i) => {
+    
+        //CRIANDO O ELEMENTO div E DEFININDO O ATRIBUTO CARD
+        const divCard = document.createElement('div')
+        divCard.setAttribute('class', 'card')
+
+        //CRIANDO O ELEMENTO img E DEFININDO OS ATRIBUTOS CARD
+        const imgCard = document.createElement('img')
+        imgCard.setAttribute('src', elem.caminho_imagem)
+        imgCard.setAttribute('alt', elem.descricao_produto)
+
+        //CRIANDO O ELEMENTO p E ATRIBUINDO A DESCRIÇÃO DOS PRODUTOS
+        const pCard = document.createElement('p')
+        pCard.innerHTML = elem.descricao_produto
+
+        //CRIANDO O ELEMENTO h2 E ATRIBUINDO O LAVOR UNITÁRIO DEIXANDO EM DUAS CASAS DECIMAIS E SUBSTITUINDO PONTO POR VIRGULA
+        const h2Card = document.createElement('h2')
+        h2Card.innerHTML = `R$ ${parseFloat(elem.valor_unitario).toFixed(2).replace('.',',')}`
+
+        //CRIANDO O ELEMENTO button E DEFININDO OS ATRIBUTOS CLASS E A DESCRIÇÃO ADICIONAR
+        const btnCard = document.createElement('button')
+        btnCard.setAttribute('class', 'btn-add')
+        btnCard.innerHTML = 'adicionar'
+
+        //ADICIONANDO OS ELEMENTOS FILHOS AOS divCard
+        divCard.appendChild(imgCard)
+        divCard.appendChild(pCard) 
+        divCard.appendChild(h2Card)
+        divCard.appendChild(btnCard)
+
+        //ADICIOANDO O divCard A SECTION CARDS
+        sectionCards.appendChild(divCard)
+
+    });
+
+
 }
