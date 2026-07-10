@@ -37,7 +37,6 @@ const carregarSecoes = () =>{
     //PEGANDO ELEMENTOS ul menu-secoes DO DOM
     const ulMenuSecoes = document.querySelector('#secoes-produtos') 
 
-    ulMenuSecoes.innerHTML = ''
 
     //CHAMANDO A FUNÇÃO menuSecoes E PERCORENDO O ARRAY DE SEÇOES JA SELECIONADAS
     menuSecoes().forEach((elem, i) => {
