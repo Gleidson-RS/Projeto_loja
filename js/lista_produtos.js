@@ -8,9 +8,9 @@ const produtos = [
   { id_produto: 7, descricao_produto: "Kit Limpeza Tecido Frágil", valor_unitario: 60.00, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia07.jpg", id_secao: 1, secao: "Kits" },
   { id_produto: 8, descricao_produto: "Kit Limpeza Rodas", valor_unitario: 60.00, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia08.jpg", id_secao: 1, secao: "Kits" },
   { id_produto: 9, descricao_produto: "Kit Limpeza Lataria", valor_unitario: 60.00, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia09.jpg", id_secao: 1, secao: "Kits" },
-  { id_produto: 10, descricao_produto: "Kit Higienização Completa", valor_unitario: 75.00, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia10.jpg", id_secao: 1, secao: "Kits" },
+  { id_produto: 10, descricao_produto: "Kit Higienização Completa", valor_unitario: 75.00, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia20.jpg", id_secao: 1, secao: "Kits" },
 
-  { id_produto: 11, descricao_produto: "Shampoo Automotivo 1L", valor_unitario: 29.90, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia11.jpg", id_secao: 2, secao: "Lavagem" },
+  { id_produto: 11, descricao_produto: "Shampoo Automotivo 1L", valor_unitario: 29.90, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia12.jpg", id_secao: 2, secao: "Lavagem" },
   { id_produto: 12, descricao_produto: "Desengraxante 500ml", valor_unitario: 24.90, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia12.jpg", id_secao: 2, secao: "Lavagem" },
   { id_produto: 13, descricao_produto: "Limpa Rodas", valor_unitario: 34.90, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia13.jpg", id_secao: 2, secao: "Lavagem" },
   { id_produto: 14, descricao_produto: "Lava Autos Concentrado", valor_unitario: 39.90, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia14.jpg", id_secao: 2, secao: "Lavagem" },
@@ -32,9 +32,9 @@ const produtos = [
   { id_produto: 27, descricao_produto: "Revitalizador de Plásticos", valor_unitario: 32.90, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia07.jpg", id_secao: 5, secao: "Acabamento" },
   { id_produto: 28, descricao_produto: "Silicone Líquido", valor_unitario: 27.90, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia08.jpg", id_secao: 5, secao: "Acabamento" },
   { id_produto: 29, descricao_produto: "Renovador de Couro", valor_unitario: 44.90, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia09.jpg", id_secao: 5, secao: "Acabamento" },
-  { id_produto: 30, descricao_produto: "Odorizador Automotivo", valor_unitario: 14.90, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia10.jpg", id_secao: 5, secao: "Acabamento" },
+  { id_produto: 30, descricao_produto: "Odorizador Automotivo", valor_unitario: 14.90, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia20.jpg", id_secao: 5, secao: "Acabamento" },
 
-  { id_produto: 31, descricao_produto: "Descontaminante Ferroso", valor_unitario: 64.90, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia11.jpg", id_secao: 6, secao: "Detalhamento" },
+  { id_produto: 31, descricao_produto: "Descontaminante Ferroso", valor_unitario: 64.90, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia01.jpg", id_secao: 6, secao: "Detalhamento" },
   { id_produto: 32, descricao_produto: "Clay Bar", valor_unitario: 49.90, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia12.jpg", id_secao: 6, secao: "Detalhamento" },
   { id_produto: 33, descricao_produto: "Lubrificante Clay", valor_unitario: 34.90, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia13.jpg", id_secao: 6, secao: "Detalhamento" },
   { id_produto: 34, descricao_produto: "Composto Polidor Corte", valor_unitario: 79.90, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia14.jpg", id_secao: 6, secao: "Detalhamento" },
