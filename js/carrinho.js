@@ -1,2 +1,9 @@
-import { produtos } from "./lista_produtos.js";
+//CRIANDO UM ARRAY DE ITENS DO CARRINHO
+const itensCarrinho = []
 
+
+
+
+
+
+export {itensCarrinho}
