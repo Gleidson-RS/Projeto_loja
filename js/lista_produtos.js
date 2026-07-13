@@ -7,7 +7,7 @@ const produtos = [
   { id_produto: 6, descricao_produto: "Kit Limpeza Borrachas", valor_unitario: 60.00, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia06.jpg", id_secao: 1, secao: "Kits" },
   { id_produto: 7, descricao_produto: "Kit Limpeza Tecido Frágil", valor_unitario: 60.00, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia07.jpg", id_secao: 1, secao: "Kits" },
   { id_produto: 8, descricao_produto: "Kit Limpeza Rodas", valor_unitario: 60.00, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia08.jpg", id_secao: 1, secao: "Kits" },
-  { id_produto: 9, descricao_produto: "Kit Limpeza Lataria", valor_unitario: 60.00, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia09.jpg", id_secao: 1, secao: "Kits" },
+  { id_produto: 9, descricao_produto: "Kit Limpeza Lataria", valor_unitario: 60.00, unidade: "UN", caminho_imagem: "..imagens/Estica-automotia09.jpg", id_secao: 1, secao: "Kits" },
   { id_produto: 10, descricao_produto: "Kit Higienização Completa", valor_unitario: 75.00, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia20.jpg", id_secao: 1, secao: "Kits" },
 
   { id_produto: 11, descricao_produto: "Shampoo Automotivo 1L", valor_unitario: 29.90, unidade: "UN", caminho_imagem: "../imagens/Estica-automotia12.jpg", id_secao: 2, secao: "Lavagem" },
