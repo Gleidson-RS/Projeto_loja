@@ -1,5 +1,9 @@
-//IMPORTANDO OS PRODUTOS DE /lista_produtos.js//
+//IMPORTANDO OS PRODUTOS DE /lista_produtos.js
 import { produtos } from "./lista_produtos.js";
+
+//IMPORTANDO A FUNÇÃO PARA ADICINAR ITENS AO CARRINHO DO ARQUIVO carrinho.js
+import { addItem } from "./carrinho.js";
+
 //PEGANDO OS ELEMENTOS DO DOM//
 const sectionCards = document.querySelector('#cards')
 
@@ -110,6 +114,7 @@ const montarCards = (objProdutos)=>{
         
         //REDIRECIONANDO PARA O CARRINHO
         btnCard.addEventListener('click', () => {
+            addItem(elem)
             console.log('Botão clicado');
             window.location.href = '/paginas/carrinho.html'
         });
