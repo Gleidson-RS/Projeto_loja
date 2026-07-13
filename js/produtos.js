@@ -3,14 +3,6 @@ import { produtos } from "./lista_produtos.js";
 //PEGANDO OS ELEMENTOS DO DOM//
 const sectionCards = document.querySelector('#cards')
 
-//CARREGANDO OS Card
-const lista_produtos = () => {
-    
-}
-
-//CHAMANDO A FUNÇÃO lista_produtos
-lista_produtos()
-
 // MONTANDO OS MENUS SEÇÕES
 const menuSecoes = () => {
     //CRIANDO A COLEÇÃO MAP
@@ -69,6 +61,21 @@ const filtroProduto = (idSecao)=>{
     return produtos.filter(elem => elem.id_secao === idSecao)
 }
 
+//CAPITURANDO OS CARACTERES DO INPUT PESQUISA
+//PEGANDO O INPUT DO DOM
+const inputPesquisa = document.querySelector('#pesquisa')
+
+inputPesquisa.addEventListener('input', (evt)=>{
+    //PEGANDO O VALOR DO input E CONVERTENDO EM MINÚSCULO
+    let txtInput = evt.target.value.toLowerCase()
+
+    //FILTRANDO OS CARDS A PARTIR DO FILTER E INCLUDES
+    montarCards(produtos.filter(elem => elem.descricao_produto.toLowerCase().includes(txtInput)))
+
+
+})
+
+
 //FUNÇÃO MONTAR CARDS
 const montarCards = (objProdutos)=>{
 
@@ -100,7 +107,14 @@ const montarCards = (objProdutos)=>{
         const btnCard = document.createElement('button')
         btnCard.setAttribute('class', 'btn-add')
         btnCard.innerHTML = 'adicionar'
-
+        
+        //REDIRECIONANDO PARA O CARRINHO
+        btnCard.addEventListener('click', () => {
+            console.log('Botão clicado');
+            window.location.href = '/paginas/carrinho.html'
+        });
+        
+        
         //ADICIONANDO OS ELEMENTOS FILHOS AOS divCard
         divCard.appendChild(imgCard)
         divCard.appendChild(pCard) 
@@ -114,3 +128,15 @@ const montarCards = (objProdutos)=>{
 
 
 }
+
+
+
+//TRANSFORMA OS BOTOES DO HTML EM BOTOES FUNCINAIS COM O JS
+const botoesAdicionar = document.querySelectorAll('.btn-add')
+
+botoesAdicionar.forEach((botao) => {
+    botao.addEventListener('click', () => {
+        console.log('Botão clicado')
+        window.location.href = 'paginas/carrinho.html'
+    })
+})
