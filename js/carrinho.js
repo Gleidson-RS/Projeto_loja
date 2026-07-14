@@ -42,8 +42,11 @@ const montaTelaCarrinho = (objListaItens)=>{
     const divValores = document.createElement('div')
     divValores.setAttribute('class', 'valores')
 
-    const pIten = document.createElement('p')
-    pIten.innerHTML = `R$ ${parseFloat(elem.valor_unitario).toFixed(2).repeat('.',',')}`
+    const pItem = document.createElement('p')
+    pItem.innerHTML = `R$ ${parseFloat(elem.valor_unitario).toFixed(2).repeat('.',',')}`
+
+    const divQuant = document.createElement('div')
+    divQuant.setAttribute('class', input-quantidade)
 
     const inputQuantidade = document.createElement('input')
     inputQuantidade.setAttribute('type', 'number')
@@ -52,8 +55,24 @@ const montaTelaCarrinho = (objListaItens)=>{
     inputQuantidade.setAttribute('class', 'input-item')
     inputQuantidade.setAttribute('value', '1')
     
+        divQuant.appendChild(inputQuantidade)
 
+        const pCalc = document.createElement('p')
+        pCalc.innerHTML = `R$ ${elem.valor_unitario * 1}`
+
+        const imgRemover = document.createElement('img')
+        imgRemover.setAttribute('src', '../imagens/icones/remover.png')
+        imgRemover.setAttribute('alt', 'remover')
+
+        divValores.appendChild(pItem)
+        divValores.appendChild(divQuant)
+        divValores.appendChild(pCalc)
+        divValores.appendChild(imgRemover)
     
+
+
+
+        
     })
     
 }
