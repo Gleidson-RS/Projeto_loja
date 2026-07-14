@@ -1,40 +1,52 @@
+import { listItens } from "./carrinho.js"
+
 //MONTAR TELA CARRINHO  
-const montaTelaCarrinho = (objListaItens)=>{
+const montaTelaCarrinho = ()=>{
     const sectionItensCarrinho = document.querySelector('#itens-carrinho')
+
+    sectionItensCarrinho.innerHTML = ''
+
+//alteração do gpt
+    const itens = listItens() || []
     
-    objListaItens.forEach((elem, i) => {
-    const sectionItem = document.createElement('section')
-    sectionItem.setAttribute('class', 'item')
+    itens.forEach((elem, i) => {
+//fim da alteração
 
-    const divImgItem = document.createElement('div')
-    divImgItem = setAttribute('class', 'img-item')
+        const sectionItem = document.createElement('section')
+        sectionItem.setAttribute('class', 'item')
 
-    const imgIten = document.createElement('img')
-    imgIten.setAttribute('src', elem.caminho_imagem)
-    imgIten.setAttribute('src', elem.descricao_produto)
+        const divImgItem = document.createElement('div')
+        divImgItem.setAttribute('class', 'img-item')
 
-    const divDescricaoItens = document.createElement('div')
-    divDescricaoItens = setAttribute('class', 'descricoes-itens')
+        const imgItem = document.createElement('img')
+        imgItem.setAttribute('src', elem.caminho_imagem)
+        imgItem.setAttribute('alt', elem.descricao_produto)
 
-    const divDescricao = document.createElement('div')
-    divDescricao = setAttribute('class', 'valores')
+        divImgItem.appendChild(imgItem)
 
-    const divValores = document.createElement('div')
-    divValores.setAttribute('class', 'valores')
+        const divDescricaoItens = document.createElement('div')
+        divDescricaoItens.setAttribute('class', 'descricoes-itens')
 
-    const pItem = document.createElement('p')
-    pItem.innerHTML = `R$ ${parseFloat(elem.valor_unitario).toFixed(2).repeat('.',',')}`
+        const divDescricao = document.createElement('div')
+        divDescricao.setAttribute('class', 'descricao')
+        divDescricao.innerHTML = elem.descricao_produto
 
-    const divQuant = document.createElement('div')
-    divQuant.setAttribute('class', input-quantidade)
+        const divValores = document.createElement('div')
+        divValores.setAttribute('class', 'valores')
 
-    const inputQuantidade = document.createElement('input')
-    inputQuantidade.setAttribute('type', 'number')
-    inputQuantidade.setAttribute('name', `quant${i}`)
-    inputQuantidade.setAttribute('id', `quant${i}`)
-    inputQuantidade.setAttribute('class', 'input-item')
-    inputQuantidade.setAttribute('value', '1')
-    
+        const pItem = document.createElement('p')
+        pItem.innerHTML = `R$ ${parseFloat(elem.valor_unitario).toFixed(2).replace('.',',')}`
+
+        const divQuant = document.createElement('div')
+        divQuant.setAttribute('class', 'input-quantidade')
+
+        const inputQuantidade = document.createElement('input')
+        inputQuantidade.setAttribute('type', 'number')
+        inputQuantidade.setAttribute('name', `quant${i}`)
+        inputQuantidade.setAttribute('id', `quant${i}`)
+        inputQuantidade.setAttribute('class', 'input-item')
+        inputQuantidade.setAttribute('value', '1')
+
         divQuant.appendChild(inputQuantidade)
 
         const pCalc = document.createElement('p')
@@ -52,9 +64,10 @@ const montaTelaCarrinho = (objListaItens)=>{
         divDescricaoItens.appendChild(divDescricao)
         divDescricaoItens.appendChild(divValores)
 
+        sectionItem.appendChild(divImgItem)
+        sectionItem.appendChild(divDescricaoItens)
+
         sectionItensCarrinho.appendChild(sectionItem)
-
-
     })
 
 }

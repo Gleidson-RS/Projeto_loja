@@ -3,11 +3,14 @@ const itensCarrinho = JSON.parse(sessionStorage.getItem('carrinhoSessao')) || []
 //const itensCarrinho2 = JSON.parse(sessionStorage.get('carrinhoSessao')) || []
 
 //FUNÇÃO PARA ADICIONAR UM ITEM
-const addItem = (ObjItem)=>{
-    itensCarrinho.push(ObjItem)
+const addItem = (ObjItem) => {
+    itensCarrinho.push(ObjItem);
 
-    sessionStorage.setItem('carrinhoSessao', JSON.stringify(itensCarrinho))
+    sessionStorage.setItem('carrinhoSessao', JSON.stringify(itensCarrinho));
 
+    console.log(sessionStorage.getItem('carrinhoSessao'));
+
+    console.log("Adicionando:", ObjItem);
 }
 
 //FUNÇÃO PARA LISTAR OS ITENS DO CARRINHO
