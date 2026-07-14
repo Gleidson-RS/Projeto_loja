@@ -203,3 +203,92 @@ body{
     margin:20px 0;
 }
 
+
+
+#carrinho{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    gap:40px;
+    align-items:start;
+}
+
+
+/* LISTA DOS ITENS */
+#itens-carrinho{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+
+/* CADA PRODUTO DO CARRINHO */
+.item{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+
+/* IMAGEM DO PRODUTO */
+.img-item img{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+}
+
+
+/* PARTE DAS INFORMAÇÕES */
+.descricoes-itens{
+    flex:1;
+}
+
+
+.descricao{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+
+/* VALORES */
+.valores{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+
+.valores p{
+    font-size:18px;
+    font-weight:bold;
+}
+
+
+/* INPUT QUANTIDADE */
+.input-quantidade input{
+    width:60px;
+    height:35px;
+    text-align:center;
+    font-size:16px;
+}
+
+
+/* BOTÃO REMOVER */
+.valores img{
+    width:25px;
+    height:25px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+
+.valores img:hover{
+    transform:scale(1.2);
+}   
