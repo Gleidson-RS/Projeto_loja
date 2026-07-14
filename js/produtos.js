@@ -115,7 +115,6 @@ const montarCards = (objProdutos)=>{
         //REDIRECIONANDO PARA O CARRINHO
         btnCard.addEventListener('click', () => {
             addItem(elem)
-            console.log('Botão clicado');
             window.location.href = '/paginas/carrinho.html'
         });
         
