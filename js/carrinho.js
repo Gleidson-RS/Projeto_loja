@@ -13,7 +13,12 @@ const item = (objProduto) => {
         caminho_imagem: objProduto.caminho_imagem,
         quantidade: 1
     }
+
+    return item
+
 }
+
+console.log(itensCarrinho.findIndex(elem => elem.id_produto == 80))
 
 //FUNÇÃO PARA ADICIONAR UM ITEM
 const addItem = (ObjItem) => {
