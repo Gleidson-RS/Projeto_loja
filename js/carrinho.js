@@ -1,6 +1,19 @@
 //CRIANDO UM ARRAY DE ITENS DO CARRINHO
 const itensCarrinho = JSON.parse(sessionStorage.getItem('carrinhoSessao')) || [] //array onde todos os itens do carrinho estão guardados
+
 //const itensCarrinho2 = JSON.parse(sessionStorage.get('carrinhoSessao')) || []
+
+//FUNÇÃO ITEM
+const item = (objProduto) => {
+
+    const item = {
+        id_produto: objProduto.id_produto,
+        descricao_produto: objProduto.descricao_produto,
+        valor_unitario: objProduto.valor_unitario,
+        caminho_imagem: objProduto.caminho_imagem,
+        quantidade: 1
+    }
+}
 
 //FUNÇÃO PARA ADICIONAR UM ITEM
 const addItem = (ObjItem) => {
