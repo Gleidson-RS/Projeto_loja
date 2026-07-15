@@ -1,5 +1,5 @@
 //CRIANDO UM ARRAY DE ITENS DO CARRINHO
-const itensCarrinho = JSON.parse(sessionStorage.getItem('carrinhoSessao')) || []
+const itensCarrinho = JSON.parse(sessionStorage.getItem('carrinhoSessao')) || [] //array onde todos os itens do carrinho estão guardados
 //const itensCarrinho2 = JSON.parse(sessionStorage.get('carrinhoSessao')) || []
 
 //FUNÇÃO PARA ADICIONAR UM ITEM
@@ -20,6 +20,15 @@ const listItens = () => {
     return listaItens
 }
 
+//FUNÇÃO PRA REMOVER ITEM DO ARRAY  
+const removeItem = (pos) => {
+
+    itensCarrinho.spluce(pos,1)
+
+    sessionStorage.setItem('carrinhoSessao', JSON.stringify(itensCarrinho))
+
+}
+
 
 //EXPORTANDO
-export { addItem, listItens }
+export { addItem, listItens, removeItem }
