@@ -23,7 +23,7 @@ const listItens = () => {
 //FUNÇÃO PRA REMOVER ITEM DO ARRAY  
 const removeItem = (pos) => {
 
-    itensCarrinho.spluce(pos,1)
+    itensCarrinho.splice(pos,1)
 
     sessionStorage.setItem('carrinhoSessao', JSON.stringify(itensCarrinho))
 
