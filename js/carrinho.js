@@ -1,3 +1,4 @@
+
 //CRIANDO UM ARRAY DE ITENS DO CARRINHO
 const itensCarrinho = JSON.parse(sessionStorage.getItem('carrinhoSessao')) || [] //array onde todos os itens do carrinho estão guardados
 
@@ -18,18 +19,27 @@ const item = (objProduto) => {
 
 }
 
-console.log(itensCarrinho.findIndex(elem => elem.id_produto == 1))
 
-//FUNÇÃO PARA ADICIONAR UM ITEM
+// FUNÇÃO PARA ADICIONAR UM ITEM
 const addItem = (ObjItem) => {
-    itensCarrinho.push(ObjItem);
 
-    sessionStorage.setItem('carrinhoSessao', JSON.stringify(itensCarrinho));
+    const novoItem = item(ObjItem)
 
-    console.log(sessionStorage.getItem('carrinhoSessao'));
+    const indice = itensCarrinho.findIndex(elem => elem.id_produto === ObjItem.id_produto)
 
-    console.log("Adicionando:", ObjItem);
+    if (indice === -1) {
+
+        itensCarrinho.push(novoItem)
+
+    } else {itensCarrinho[indice].quantidade++}
+
+
+    sessionStorage.setItem("carrinhoSessao", JSON.stringify(itensCarrinho));
+
+    console.log(itensCarrinho)
 }
+
+
 
 //FUNÇÃO PARA LISTAR OS ITENS DO CARRINHO
 const listItens = () => {
