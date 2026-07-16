@@ -1,4 +1,4 @@
-import { listItens, removeItem } from "./carrinho.js"
+import { listItens, removeItem, novaQuant } from "./carrinho.js"
 
 //MONTAR TELA CARRINHO  
 const montaTelaCarrinho = ()=>{
@@ -46,6 +46,28 @@ const montaTelaCarrinho = ()=>{
         inputQuantidade.setAttribute('id', `quant${i}`)
         inputQuantidade.setAttribute('class', 'input-item')
         inputQuantidade.setAttribute('value', elem.quantidade)
+        inputQuantidade.setAttribute('min' , '1')
+
+        inputQuantidade.addEventListener('input', () =>{
+
+            inputQuantidade.value = parseFloat(inputQuantidade.value)
+
+
+
+
+            let quantidade = Number(inputQuantidade.value)
+
+            if (!Number.isInteger(quantidade) || quantidade <= 0) {
+                inputQuantidade.value = 1
+                quantidade = 1
+            }
+        
+            novaQuant(i, quantidade)
+        
+            montaTelaCarrinho()
+            novaQuant(i, inputQuantidade.value)
+
+        })
 
         divQuant.appendChild(inputQuantidade)
 
@@ -82,8 +104,33 @@ const montaTelaCarrinho = ()=>{
 
 montaTelaCarrinho()
 
-const removeItemTela = (pos) => {
-    removeItem(pos)
+const removeItemTela = (i) => {
+    removeItem(i)
 
     montaTelaCarrinho()
 }
+
+
+//ATUALIZA O RESUMO DA COMPRA
+const atualizaResumo = () => {
+
+    const itens = listItens() || []
+
+    const total = itens.reduce((soma, item) => {
+
+        return soma + (item.valor_unitario * item.quantidade)
+
+    }, 0)
+
+
+    document.querySelector('#valor-produtos').innerHTML =
+    `R$ ${total.toFixed(2).replace('.', ',')}`
+
+
+    document.querySelector('#valor-total').innerHTML =
+    `R$ ${total.toFixed(2).replace('.', ',')}`
+}
+
+
+//CHAMA O RESUMO AO CARREGAR A PÁGINA
+atualizaResumo()

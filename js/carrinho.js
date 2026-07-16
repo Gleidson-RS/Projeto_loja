@@ -4,8 +4,8 @@ const itensCarrinho = JSON.parse(sessionStorage.getItem('carrinhoSessao')) || []
 
 //const itensCarrinho2 = JSON.parse(sessionStorage.get('carrinhoSessao')) || []
 
-//FUNÇÃO ITEM
-const item = (objProduto) => {
+//FUNÇÃO QUE CRIA O ITEM (que é diferente do produto)
+const item = (objProduto) => { 
 
     const item = {
         id_produto: objProduto.id_produto,
@@ -19,27 +19,43 @@ const item = (objProduto) => {
 
 }
 
-
 // FUNÇÃO PARA ADICIONAR UM ITEM
 const addItem = (ObjItem) => {
 
-    const novoItem = item(ObjItem)
+    const novoItem = item(ObjItem) //expecifica quem é o item a ser add no carrinho)
 
-    const indice = itensCarrinho.findIndex(elem => elem.id_produto === ObjItem.id_produto)
+    const indice = itensCarrinho.findIndex(elem => elem.id_produto === ObjItem.id_produto) //compara o id do produto (ou novo item) com o id dos itens dentro do carrinho
 
     if (indice === -1) {
 
-        itensCarrinho.push(novoItem)
+        itensCarrinho.push(novoItem) //envia o novo item caso não tenha um igual no carrinho
 
-    } else {itensCarrinho[indice].quantidade++}
+    } else {itensCarrinho[indice].quantidade++} //aumenta a quantidade do produto ja existente se o usuario tentar adicinar ele novamente
 
 
-    sessionStorage.setItem("carrinhoSessao", JSON.stringify(itensCarrinho));
+    sessionStorage.setItem("carrinhoSessao", JSON.stringify(itensCarrinho)); //traduz para JSON
 
     console.log(itensCarrinho)
 }
+//ALTERA A QUANIDADE DO PRODUTO DE ACORDO COM O INPUT DO USUARIO
+const novaQuant = (i, quantidade) => {
 
+    console.log("i recebido:", i)
+    console.log("tamanho array:", itensCarrinho.length)
+    console.log(itensCarrinho)
 
+    itensCarrinho[i].quantidade = quantidade
+
+    sessionStorage.setItem('carrinhoSessao', JSON.stringify(itensCarrinho))
+    
+
+    itensCarrinho[i].quantidade = quantidade
+
+    sessionStorage.setItem(
+        'carrinhoSessao',
+        JSON.stringify(itensCarrinho)
+    )
+}
 
 //FUNÇÃO PARA LISTAR OS ITENS DO CARRINHO
 const listItens = () => {
@@ -49,9 +65,9 @@ const listItens = () => {
 }
 
 //FUNÇÃO PRA REMOVER ITEM DO ARRAY  
-const removeItem = (pos) => {
+const removeItem = (i) => {
 
-    itensCarrinho.splice(pos,1)
+    itensCarrinho.splice(i,1)
 
     sessionStorage.setItem('carrinhoSessao', JSON.stringify(itensCarrinho))
 
@@ -59,4 +75,6 @@ const removeItem = (pos) => {
 
 
 //EXPORTANDO
-export { addItem, listItens, removeItem }
+export { addItem, listItens, removeItem, novaQuant }
+
+
