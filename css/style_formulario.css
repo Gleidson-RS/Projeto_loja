@@ -20,7 +20,7 @@
 #cabecalho{
 
     color: rgb(255, 0, 0);
-    background-color: var(--cor02);
+    background-color: var(--cor04);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,13 +51,13 @@
     margin-top: 50px;
     width: 650px;
     padding: 15px;
-    background-color: rgb(128, 126, 126);
+    background-color: var(--cor05);
     display: flex;
     flex-direction: column;
     align-items: normal;
     justify-content: normal;
     border: 1px solid var(--cor02);
-    color: #000000;
+    color: #ff0000;
 }
 
 #campos input{
@@ -105,7 +105,6 @@
 
     height: 40px;
     width: 250px;
-    padding: 15px;
 }
 
 
