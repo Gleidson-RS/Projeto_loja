@@ -38,22 +38,18 @@ const addItem = (ObjItem) => {
     console.log(itensCarrinho)
 }
 //ALTERA A QUANIDADE DO PRODUTO DE ACORDO COM O INPUT DO USUARIO
-// ALTERAÇÃO
-// altera quantidade do produto
-const novaQuant = (i, quantidade)=>{
+const novaQuant = (i, quantidade) => {
 
+    console.log("i recebido:", i)
+    console.log("tamanho array:", itensCarrinho.length)
+    console.log(itensCarrinho)
 
     itensCarrinho[i].quantidade = quantidade
 
-
-
-    sessionStorage.setItem(
-        'carrinhoSessao',
-        JSON.stringify(itensCarrinho)
-    )
-
-
+    sessionStorage.setItem('carrinhoSessao', JSON.stringify(itensCarrinho))
 }
+
+
 
 //FUNÇÃO PARA LISTAR OS ITENS DO CARRINHO
 const listItens = () => {
@@ -74,5 +70,3 @@ const removeItem = (i) => {
 
 //EXPORTANDO
 export { addItem, listItens, removeItem, novaQuant }
-
-

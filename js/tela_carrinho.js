@@ -58,7 +58,7 @@ const montaTelaCarrinho = () => {
 
             // valida se é inteiro positivo
             // ALTERAÇÃO PELO GPT
-            if (Number.isInteger(quantidade) || quantidade <= 0) {
+            if (!Number.isInteger(quantidade) || quantidade <= 0) {
 
                 quantidade = 1
                 inputQuantidade.value = 1
@@ -168,16 +168,10 @@ const atualizaResumo = () => {
 
 
 
-    document.querySelector('#valor-produtos').innerHTML =
-
-        `R$ ${total.toFixed(2).replace('.', ',')}`
-
-
-
-    document.querySelector('#valor-total').innerHTML =
-
-        `R$ ${total.toFixed(2).replace('.', ',')}`
-
+    document.querySelector('#valor-produtos').innerHTML = `R$ ${total.toFixed(2).replace('.', ',')}`
+    
+    
+    document.querySelector('#valor-total').innerHTML = `R$ ${total.toFixed(2).replace('.', ',')}`
 
 }
 
